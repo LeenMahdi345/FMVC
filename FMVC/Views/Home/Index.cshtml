@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section Title{
+home
+}
+@section subTitle{
+dont show
+}
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <form asp-controller="Account" asp-action="Login" method="post">
+
+                    <button type="submit">Login</button>
+                </form>
+</div>

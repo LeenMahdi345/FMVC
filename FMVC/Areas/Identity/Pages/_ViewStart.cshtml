@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+
+ void ConfigureServices(IServiceCollection services)
+{
+    services.AddDistributedMemoryCache(); 
+    services.AddSession(options =>
+    {
+        options.IdleTimeout = TimeSpan.FromMinutes(30); 
+        options.Cookie.HttpOnly = true;
+        options.Cookie.IsEssential = true;
+    });
+
+    services.AddControllersWithViews();
+}
+}
